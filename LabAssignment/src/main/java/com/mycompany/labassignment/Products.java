@@ -45,6 +45,28 @@ public class Products {
         this.Subgroup = Subgroup;
     }
 
+    public int getId() {
+        return Id;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public String getGroup() {
+        return Group;
+    }
+
+    public String getSubgroup() {
+        return Subgroup;
+    }
+
+    public int getPrice() {
+        return Price;
+    }
+    
+    
+
   
     
     
