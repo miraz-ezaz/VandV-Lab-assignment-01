@@ -16,12 +16,14 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author User
  */
 public class PaymentTest {
+    static Payment payment;
     
     public PaymentTest() {
     }
     
     @BeforeAll
     public static void setUpClass() {
+        payment = new Payment();
     }
     
     @AfterAll
