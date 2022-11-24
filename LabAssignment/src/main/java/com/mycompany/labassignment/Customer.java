@@ -47,6 +47,7 @@ public class Customer {
         this.payment.setName(this.Name);
         this.payment.setCustomerId(this.Id);
         this.payment.setPrice(this.cart.Total);
+        this.payment.MakePayment();
         
     }
     
