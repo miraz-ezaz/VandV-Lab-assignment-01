@@ -9,16 +9,21 @@ package com.mycompany.labassignment;
  * @author User
  */
 public class Payment {
-    char CustomerId;
-    char Name;
-    char CardType;
-    char CardNo;
+    String CustomerId;
+    String Name;
+    String CardType;
+    String CardNo;
 
-    public Payment(char CustomerId, char Name, char CardType, char CardNo) {
+    public Payment(String CustomerId, String Name, String CardType, String CardNo) {
         this.CustomerId = CustomerId;
         this.Name = Name;
         this.CardType = CardType;
         this.CardNo = CardNo;
     }
     
+    public void MakePayment(){
+        
+    }
+
+   
 }

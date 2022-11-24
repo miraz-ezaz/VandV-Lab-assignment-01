@@ -4,29 +4,45 @@
  */
 package com.mycompany.labassignment;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
 public class Cart {
+    int Id;
+    int NumberOfProducts;
+    float Price;
+    float Total;
+    ArrayList<Products> productList;
 
-    public Cart(int Id, int NumberOfProducts, char Product1, char Product2, char Productn, float Price, float Total) {
+    public Cart(int Id) {
+        
         this.Id = Id;
-        this.NumberOfProducts = NumberOfProducts;
-        this.Product1 = Product1;
-        this.Product2 = Product2;
-        this.Productn = Productn;
-        this.Price = Price;
-        this.Total = Total;
+        this.productList = new ArrayList<Products>();
+        this.Total = 0 ;
+    }
+    
+    public void AddToCart(Products product){
+        productList.add(product);
+        Total += product.Price;
+                
+    }
+   
+
+    public int getNumberOfProducts() {
+        return productList.size();
+    }
+
+    public float getTotal() {
+        return Total;
     }
     
     
     
-    int Id;
-    int NumberOfProducts;
-    char Product1;
-    char Product2;
-    char Productn;
-    float Price;
-    float Total;
+    
+
+    
+    
 }

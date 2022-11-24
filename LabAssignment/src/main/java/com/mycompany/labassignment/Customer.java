@@ -9,19 +9,23 @@ package com.mycompany.labassignment;
  * @author User
  */
 public class Customer {
-    char Id;
-    char Name;
-    char Address;
+    String Id;
+    String Name;
+    String Address;
     int PhNo;
+    Cart cart;
 
-    public Customer(char Id, char Name, char Address, int PhNo) {
+    public Customer(String Id, String Name, String Address, int PhNo) {
         this.Id = Id;
         this.Name = Name;
         this.Address = Address;
         this.PhNo = PhNo;
+        this.cart = new Cart(Id)
     }
+
+   
     
-    public void BuyProducts(){
+    public void BuyProducts(Products product){
         
     }
     
@@ -33,11 +37,14 @@ public class Customer {
         
     }
     
-    public void AddToCart(){
+    public void AddToCart(Products product){
+        cart.AddToCart(product);
         
     }
     
-    public void DeleteFromCart(){
+    public void DeleteFromCart(int Id){
+        
+        cart.productList.remove(Id);
         
     }
 }
