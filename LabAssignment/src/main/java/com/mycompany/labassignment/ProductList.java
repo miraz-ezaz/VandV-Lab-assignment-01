@@ -19,9 +19,13 @@ public class ProductList {
         
         productList = new ArrayList<Products>();
         productList.add(product1);
-        productList.add(product2);
-                
-        
+        productList.add(product2);   
+    }
+    
+    public void ViewProducts() {
+        for (Products product : productList){
+            System.out.println(product.Name);
+        }
     }
     
     

@@ -30,6 +30,7 @@ public class LabAssignment {
         
         System.out.println("Guest Page");
         Guest guest = new Guest();
+        guest.ViewProducts();
         
         guest.GetRegistered("1", "Miraj", "Sylhet", 123456);
         

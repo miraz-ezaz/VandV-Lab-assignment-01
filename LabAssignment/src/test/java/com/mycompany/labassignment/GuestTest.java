@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GuestTest {
     
+    Guest guest;
+    Guest guest2;
+    
     public GuestTest() {
     }
 
@@ -21,6 +24,8 @@ public class GuestTest {
      */
     @Test
     public void testViewProducts() {
+        Guest guest = new Guest();
+        guest.ViewProducts();
     }
 
     /**
@@ -28,6 +33,8 @@ public class GuestTest {
      */
     @Test
     public void testGetRegistered() {
+        Guest guest2 = new Guest();
+        guest2.GetRegistered("1", "Miraj", "Sylhet", 123456);
     }
     
 }

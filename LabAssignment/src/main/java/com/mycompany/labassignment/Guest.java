@@ -16,6 +16,10 @@ public class Guest {
     
     
     public void ViewProducts(){
+        ProductList p = new ProductList();
+        p.ViewProducts();
+        
+        
         
     }
     
