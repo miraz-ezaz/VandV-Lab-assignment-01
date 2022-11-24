@@ -29,7 +29,7 @@ public class CustomerTest {
     public static void setUpClass() {
         
         customer1 = new Customer("1", "Miraj", "Sylhet", 123456);
-        customer1 = new Customer("2", "Ejaz", "Dhaka", 789);
+        customer2 = new Customer("2", "Ejaz", "Dhaka", 789);
         product1 = new Products(0, "Carrot", "Vegetable", "Winter Veg", 100);
         product2 = new Products(1, "Cabbage", "Vegetable", "Winter Veg", 80);
         
@@ -95,8 +95,12 @@ public class CustomerTest {
         System.out.println("MakePayment");
         String CardType = "Debit";
         String CardNo = "10101";
-        Customer instance = customer1;
-        instance.MakePayment(CardType, CardNo);
+        Customer instance = customer2;
+        customer2.AddToCart(product1);
+        customer2.AddToCart(product2);
+        boolean s = instance.MakePayment(CardType, CardNo);
+        assertTrue(s);
+        
         
     }
 

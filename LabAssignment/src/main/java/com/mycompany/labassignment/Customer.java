@@ -41,13 +41,15 @@ public class Customer {
         
     }
     
-    public void MakePayment(String CardType, String CardNo){
+    public boolean MakePayment(String CardType, String CardNo){
         this.payment.setCardNo(CardNo);
         this.payment.setCardType(CardType);
         this.payment.setName(this.Name);
         this.payment.setCustomerId(this.Id);
         this.payment.setPrice(this.cart.Total);
-        this.payment.MakePayment();
+        boolean success = this.payment.MakePayment();
+        return success;
+        
         
     }
     

@@ -19,7 +19,9 @@ public class Guest {
         
     }
     
-    public void GetRegistered(){
+    public void GetRegistered(String Id, String Name, String Address, int PhNo){
+        Customer customer = new Customer(Id, Name, Address, PhNo);
+        System.out.println("Customer Registration SuccessFull. Name: " + customer.Name);
         
     }
     

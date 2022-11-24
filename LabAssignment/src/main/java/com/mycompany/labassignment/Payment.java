@@ -24,11 +24,11 @@ public class Payment {
     public Payment() {
     }
     
-    public void MakePayment(){
+    public boolean MakePayment(){
         
         System.out.println("Payment Successfull");
         System.out.println("Total: "+this.price );
-        
+        return true;
     }
 
     public void setCustomerId(String CustomerId) {
